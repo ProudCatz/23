@@ -3,6 +3,6 @@
 $(document).ready(
     function () {
         $("#btn").click(function () {
-            $("#btn").addClass("btn btn-danger");
+            $("#div").fadeToggle(2000);
         });
     });
