@@ -1,0 +1,9 @@
+﻿body {
+}
+
+#div{
+    height:50px;
+    width:50px;
+    border:2px #66ccff solid;
+    background-color:#ff0000;
+}
