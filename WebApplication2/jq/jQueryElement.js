@@ -4,39 +4,38 @@
 $(document).ready(
     function () {
         $("#btn1").click(function () {
-            $("#p1").hide(1000)
+            alert($("#p1").attr("id"));
         });
     });
+
 
 $(document).ready(
     function () {
         $("#btn2").click(function () {
-            $("#p1").show(1000)
+            $("#p1").attr("style", "background-color:#66ccff"),
+            alert($("#p1").attr("style"));
         });
     });
+
 
 $(document).ready(
     function () {
         $("#btn3").click(function () {
-            $("#p1").toggle(1000)
-        });
-    });
-
-$(document).ready(
-    function () {
-        $("#p4").click(function () {
-            $("#div1").slideToggle(300)
+            $("#div").append($("#p1").attr("style"))
         });
     });
 
 $(document).ready(
     function () {
         $("#btn4").click(function () {
-            $("#div2").toggle(300, function () {
-                setTimeout(function () {
-                    alert($("#div2").text())
-                }, 1000);
-            })
+            $("#p1").removeAttr("style")
+        });
+    });
+
+$(document).ready(
+    function () {
+        $("#btn5").click(function () {
+            $("#p3").remove();
         });
     });
 

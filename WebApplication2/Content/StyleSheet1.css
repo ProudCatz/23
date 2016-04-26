@@ -1,7 +1,14 @@
 ﻿body {
 }
 
-#div{
+.div1{
+    height:50px;
+    width:50px;
+    border:2px #66ccff solid;
+    background-color:#00ff00;
+}
+
+.div2{
     height:50px;
     width:50px;
     border:2px #66ccff solid;

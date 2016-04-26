@@ -79,8 +79,12 @@
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\StyleSheet1.css" />
     <Content Include="HtmlPage1.html" />
+    <Content Include="jQueryCSS.html" />
+    <Content Include="jQueryElement.html" />
     <Content Include="jQueryHideShow.html" />
     <Content Include="jQuerySelecter.html" />
+    <Content Include="jq\jQueryCSS.js" />
+    <Content Include="jq\jQueryElement.js" />
     <Content Include="jq\jQueryHideShow.js" />
     <Content Include="jq\jQuerySelecter.js" />
     <Content Include="jq\MYScript.js" />
