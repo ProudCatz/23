@@ -33,7 +33,10 @@ $(document).ready(
     function () {
         $("#btn4").click(function () {
             $("#div2").toggle(300, function () {
-                alert($("#div2").text());
+                setTimeout(function () {
+                    alert($("#div2").text())
+                }, 1000);
+
             })
         });
     });
