@@ -54,25 +54,40 @@
             });
         });
 
+        //$(function () {
+        //    $("#btnselect").click(function () {
+        //        var ss = $("#txt").val() == "" ? 0 : $("#txt").val();
+        //        $.ajax({
+        //            type: "post",
+        //            url: "WebForm1.aspx/select",
+        //            data: "{'id':'" + ss + "'}",
+        //            datatype: "json",
+        //            contentType: "application/json; charset=utf-8",
+        //            success: function (data) {
+        //                $("#table").html("");
+        //                $(data.d).each(function () {
+        //                    $("#table").addClass("#ta");
+        //                    $("#table").append("<tr>" + this + "</tr>");
+        //                })
+        //            }
+        //        })
+        //    })
+        //});
+
         $(function () {
             $("#btnselect").click(function () {
                 var ss = $("#txt").val() == "" ? 0 : $("#txt").val();
-                $.ajax({
-                    type: "post",
-                    url: "WebForm1.aspx/select",
-                    data: "{'id':'" + ss + "'}",
-                    datatype: "json",
-                    contentType: "application/json; charset=utf-8",
-                    success: function (data) {
-                        $("#table").html("");
-                        $(data.d).each(function () {
-                            $("#table").addClass("#ta");
-                            $("#table").append("<tr>" + this + "</tr>");
-                        })
-                    }
-                })
-            })
+                $.post("WebForm1.aspx/select", { id: ss }, function (data) {
+                    //$(data.d).each(function () {
+                    //    $("#table").addClass("#ta");
+                    //    $("#table").append("<tr>" + this + "</tr>");
+                    //});
+                    alert(data)
+                });
+            });
         });
+
+
         $(function () {
             $("#btnToggle").click(function () {
                 $("#table").fadeToggle(1000);
@@ -109,7 +124,7 @@
             </div>
 
         </form>
-</div>
-   
+    </div>
+
 </body>
 </html>
