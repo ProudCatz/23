@@ -9,6 +9,7 @@
     <script src="Scripts/jquery-2.2.3.js"></script>
     <script src="Scripts/bootstrap.js"></script>
     <script src="Scripts/jquery.paginate.js"></script>
+    <script src="jq/HtmlPage1.js"></script>
     <script type="text/javascript">
 
         $(function () {
@@ -54,26 +55,26 @@
             });
         });
 
-        $(function () {
-            $("#btnselect").click(function () {
-                var ss = $("#txt").val() == "" ? 0 : $("#txt").val();
-                $("#table").html("数据请求中,请稍后.....");
-                $.ajax({
-                    type: "post",
-                    url: "WebForm1.aspx/select",
-                    data: "{'id':'" + ss + "'}",
-                    datatype: "json",
-                    contentType: "application/json; charset=utf-8",
-                    success: function (data) {
-                        $("#table").html("");
-                        $(data.d).each(function () {
-                            $("#table").addClass("#ta");
-                            $("#table").append("<tr>" + this + "</tr>");
-                        })
-                    }
-                })
-            })
-        });
+        //$(function () {
+        //    $("#btnselect").click(function () {
+        //        var ss = $("#txt").val() == "" ? 0 : $("#txt").val();
+        //        $("#table").html("数据请求中,请稍后.....");
+        //        $.ajax({
+        //            type: "post",
+        //            url: "WebForm1.aspx/select",
+        //            data: "{'id':'" + ss + "'}",
+        //            datatype: "json",
+        //            contentType: "application/json; charset=utf-8",
+        //            success: function (data) {
+        //                $("#table").html("");
+        //                $(data.d).each(function () {
+        //                    $("#table").addClass("#ta");
+        //                    $("#table").append("<tr>" + this + "</tr>");
+        //                })
+        //            }
+        //        })
+        //    })
+        //});
 
 
         $(function () {
@@ -107,6 +108,7 @@
                 <ul id="list"></ul>
                 <div style="width:500px">
                     <table id="table" name="table" class="table table-bordered table-sm"></table>
+                    <div id="div2"></div>
                 </div>
 
             </div>

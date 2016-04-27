@@ -25,6 +25,12 @@ namespace WebApplication2
             return aaa;
         }
 
+        [WebMethod]
+        public  static string sel(string id)
+        {
+            return "id:" + id;
+        }
+
 
 
         [WebMethod]

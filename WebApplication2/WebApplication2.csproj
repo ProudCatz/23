@@ -79,6 +79,8 @@
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\StyleSheet1.css" />
     <Content Include="HtmlPage1.html" />
+    <Content Include="jq\HtmlPage1.js" />
+    <Content Include="p.htm" />
     <Content Include="jQueryCSS.html" />
     <Content Include="jQueryElement.html" />
     <Content Include="jQueryHideShow.html" />
