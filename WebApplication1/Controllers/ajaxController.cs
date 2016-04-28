@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
@@ -16,7 +17,11 @@ namespace WebApplication1.Controllers
 
         public ActionResult select()
         {
-            return View();
+            stu stu = new stu();
+            stu.id = "1";
+            stu.name = "2";
+            stu.sex = "3";
+            return View(stu);
 
         }
 
@@ -31,6 +36,15 @@ namespace WebApplication1.Controllers
                 li.Add(ss + i.ToString());
             }
             return Json(li);
+        }
+
+        [HttpPost]
+        public ActionResult selmodel(stu stu)
+        {
+            stu.id += "1";
+            stu.name += "2";
+            stu.sex += "3";
+            return Json(stu);
         }
     }
 }

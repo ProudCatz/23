@@ -1,4 +1,4 @@
-﻿
+﻿@model WebApplication1.Models.stu
 @{
     ViewBag.Title = "select";
 }
@@ -15,14 +15,23 @@
             <div class="form-inline">
                 <input type="text" ID="txt" class="form-control" />
 
+                @*<input type="text" id="id" placeholder="id" />
+                    <input type="text" id="name" placeholder="name" />
+                    <input type="text" id="sex" placeholder="sex" />*@
+                @Html.TextBoxFor(s => s.id)
+                @Html.TextBoxFor(s => s.name)
+                @Html.TextBoxFor(s => s.sex)
+
+
+
                 <input type="button" id="btnOK" class="btn btn-info" value="btnOK" />
-                <input type="button" id="btnToggle" class="btn btn-info" value="btnOK" />
                 <input type="button" id="btnselect" class="btn" value="btnselect" />
             </div>
             <ul id="list"></ul>
             <div style="width:500px">
                 <table id="table" name="table" class="table table-bordered table-sm"></table>
                 <div id="div2"></div>
+                <div id="divstu"></div>
             </div>
 
         </div>
@@ -30,3 +39,6 @@
     </form>
 </div>
 
+<script type="text/javascript">
+   
+</script>

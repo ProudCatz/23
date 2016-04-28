@@ -13,3 +13,21 @@ $(document).ready(function () {
         });
     });
 });
+
+
+$(document).ready(function () {
+    $("#btnOK").click(function () {
+        var id = $("#id").val();
+        var name = $("#name").val();
+        var sex = $("#sex").val();
+        $("#div2").html("数据请求中,请稍后.....");
+        $.post("ajax/selmodel", {
+            id: id,
+            name: name,
+            sex: sex
+        }, function (result) {
+            $("#div2").html("");
+            $("#div2").text(result.id + result.name + result.sex);
+        })
+    })
+})
