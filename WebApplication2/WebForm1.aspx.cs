@@ -26,9 +26,15 @@ namespace WebApplication2
         }
 
         [WebMethod]
-        public  static string sel(string id)
+        public static string sel(string id)
         {
             return "id:" + id;
+        }
+
+        [WebMethod]
+        public static string sel2(string id, string name, string sex)
+        {
+            return id + "  " + name + "    " + sex;
         }
 
 
@@ -45,7 +51,7 @@ namespace WebApplication2
         [WebMethod]
         public static List<object> select(string id)
         {
-            
+
             DataTable dt = new DataTable();
             dt = Data(id);
             List<object> li = new List<object>();
@@ -61,7 +67,7 @@ namespace WebApplication2
             return li;
         }
 
-     
+
         public static DataTable Data(string id)
         {
             SqlConnection conn = new SqlConnection("Data Source=Z-PC\\MSSQL14;Initial Catalog=Mall;Persist Security Info=True;User ID=sa;Password=feifeidemao");
