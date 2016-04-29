@@ -28,6 +28,6 @@ $(document).ready(function () {
         }, function (result) {
             $("#div2").html("");
             $("#div2").text(result.id + result.name + result.sex);
-        })
-    })
-})
+        });
+    });
+});
