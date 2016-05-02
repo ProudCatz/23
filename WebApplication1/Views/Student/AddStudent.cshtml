@@ -3,39 +3,55 @@
     ViewBag.Title = "AddStudent";
 }
 <script src="~/Scripts/jquery-2.0.0.js"></script>
+<script src="~/jq/IdCard.js"></script>
 <script src="~/jq/Student.js"></script>
 <h2>AddStudent</h2>
-<div class="container">
+<div>
     <div class="form-horizontal">
         <div class="form-group">
-            @Html.LabelFor(s => s.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(s => s.Email, htmlAttributes: new { @class = "form-control" })
+            <label for="Email" class="control-label col-md-2">Email</label>
+            <div class="col-md-10 form-inline">
+                <input type="text" id="Email" class="form-control" style="width:300px;" />
+                <span id="spEmail" class="alert" role="alert"></span>
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(s => s.Tel, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(s => s.Tel, htmlAttributes: new { @class = "form-control" })
+            <label for="Password" class="control-label col-md-2">Password</label>
+            <div class="col-md-10 form-inline">
+                <input type="password" id="Password" class="form-control" style="width:300px;" />
+                <span id="spPassword" class="alert" role="alert"></span>
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(s => s.Name, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(s => s.Name, htmlAttributes: new { @class = "form-control" })
+            <label for="Tel" class="control-label col-md-2">Tel</label>
+            <div class="col-md-10 form-inline">
+                <input type="text" id="Tel" class="form-control" style="width:300px;" />
+                <span id="spTel" class="alert" role="alert"></span>
+
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(s => s.IdCard, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(s => s.IdCard, htmlAttributes: new { @class = "form-control" })
+            <label for="Name" class="control-label col-md-2">Name</label>
+            <div class="col-md-10 form-inline">
+                <input type="text" id="Name" class="form-control" style="width:300px;"/>
+                <span id="spName" class="alert" role="alert"></span>
+
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(s => s.Address, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(s => s.Address, htmlAttributes: new { @class = "form-control" })
+            <label for="IdCard" class="control-label col-md-2">IdCard</label>
+            <div class="col-md-10 form-inline">
+                <input type="text" id="IdCard" class="form-control" style="width:300px;" />
+                <span id="spIdCard" class="alert" role="alert"></span>
             </div>
+        </div>
+        <div class="form-group">
+            <label for="Address" class="control-label col-md-2">Address</label>
+            <div class="col-md-10 form-inline">
+                <input type="text" id="Address" class="form-control" style="width:300px;" />
+                <span id="spAddress" class="alert" role="alert"></span>
+            </div>
+
         </div>
         <button id="btn" class="btn btn-info col-md-offset-2">提交</button>
     </div>
