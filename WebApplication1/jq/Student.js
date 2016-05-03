@@ -163,7 +163,7 @@ $(document).ready(function () {
     });
 });
 
-//IdCard
+//IdCard 
 $(document).ready(function () {
     var input = $("#IdCard");
     var span = $("#spIdCard");
