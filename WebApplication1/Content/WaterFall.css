@@ -1,0 +1,20 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.box {
+    float: left;
+    position: relative;
+}
+
+.content img {
+    width: 180px;
+    height: auto;
+}

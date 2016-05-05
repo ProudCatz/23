@@ -16,24 +16,23 @@ $(document).ready(function () {
             if ($(this).parents("div .form-group").attr("class") == "form-group has-error") {
                 return false;
             }
-            else {
-                var ss = {
-                    Email: $("#Email").val(),
-                    Password: $("#Password").val(),
-                    Name: $("#Name").val(),
-                    Tel: $("#Tel").val(),
-                    Address: $("#Address").val(),
-                    IdCard: $("#IdCard").val()
-                };
-                $.post("Student/AddStudent", ss, function (text) {
-                    if (text == "true") {
-                        alert("添加成功");
-                    }
-                    else {
-                        alert("添加失败");
-                    }
-                });
-            } return false;
+            var ss = {
+                Email: $("#Email").val(),
+                Password: $("#Password").val(),
+                Name: $("#Name").val(),
+                Tel: $("#Tel").val(),
+                Address: $("#Address").val(),
+                IdCard: $("#IdCard").val()
+            };
+            $.post("Student/AddStudent", ss, function (text) {
+                if (text == "true") {
+                    alert("添加成功");
+                }
+                else {
+                    alert("添加失败");
+                }
+            });
+
         });
     });
 });
