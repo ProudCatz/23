@@ -407,6 +407,7 @@
     <None Include="Scripts\jquery-2.0.0.intellisense.js" />
     <Content Include="jq\IdCard.js" />
     <Content Include="jq\Student.js" />
+    <Content Include="jq\Table.js" />
     <Content Include="jq\WaterFall.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -454,10 +455,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ajaxController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\TableController.cs" />
     <Compile Include="Controllers\WaterFallController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Products.cs" />
     <Compile Include="Models\stu.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -470,6 +473,7 @@
     <Content Include="Views\Student\AddStudent.cshtml" />
     <Content Include="Views\WaterFall\Index.cshtml" />
     <Content Include="Views\ajax\postindex.cshtml" />
+    <Content Include="Views\Table\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
