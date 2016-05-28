@@ -31,7 +31,7 @@ namespace WebApplication1.Controllers
         {
             if (stu.id == 0 && stu.Email != null && stu.IdCard != null && stu.Name != null && stu.Tel != null)
             {
-                return Json("true");
+                return Json(stu);
             }
             return Json("false");
         }

@@ -4,6 +4,7 @@
 //提交
 $(document).ready(function () {
     $("#btn").click(function () {
+        var re = true;
         $("input").each(function () {
             if ($(this).attr("id") != "Address") {
                 if ($(this).val().length == 0) {
@@ -14,8 +15,10 @@ $(document).ready(function () {
         });
         $("input").each(function () {
             if ($(this).parents("div .form-group").attr("class") == "form-group has-error") {
-                return false;
+                re = false;
             }
+        });
+        if (re) {
             var ss = {
                 Email: $("#Email").val(),
                 Password: $("#Password").val(),
@@ -24,18 +27,34 @@ $(document).ready(function () {
                 Address: $("#Address").val(),
                 IdCard: $("#IdCard").val()
             };
+
             $.post("Student/AddStudent", ss, function (text) {
-                if (text == "true") {
-                    alert("添加成功");
+                if (text != "false") {
+                    var dl = $("#dllist");
+                    dl.html("");
+                    dl.append("<dt>Email<dt>");
+                    dl.append("<dd>" + text.Email + "<dd>");
+                    dl.append("<dt>Password<dt>");
+                    dl.append("<dd>" + text.Password + "<dd>");
+                    dl.append("<dt>Name<dt>");
+                    dl.append("<dd>" + text.Name + "<dd>");
+                    dl.append("<dt>Tel<dt>");
+                    dl.append("<dd>" + text.Tel + "<dd>");
+                    dl.append("<dt>IdCard<dt>");
+                    dl.append("<dd>" + text.IdCard + "<dd>");
+                    dl.append("<dt>Address<dt>");
+                    dl.append("<dd>" + text.Address + "<dd>");
                 }
                 else {
                     alert("添加失败");
                 }
             });
+        }
 
-        });
+
     });
 });
+
 
 
 //效果

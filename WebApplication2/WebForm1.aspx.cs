@@ -82,6 +82,15 @@ namespace WebApplication2
             return dt;
         }
 
+        [WebMethod]
+        public static string mmmmm(string ss)
+        {
+            string aa = ss;
+            return aa;
+
+
+        }
+
 
 
     }

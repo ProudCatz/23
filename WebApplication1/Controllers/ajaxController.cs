@@ -46,5 +46,27 @@ namespace WebApplication1.Controllers
             stu.sex += "3";
             return Json(stu);
         }
+
+        [HttpPost]
+        public ActionResult postindex(string id, string name)
+        {
+            var model = new
+            {
+                id = id,
+                name = name
+            };
+            return Json(model);
+        }
+
+
+        public ActionResult postindex()
+        {
+            return View();
+        }
+
+
+
+
+
     }
 }

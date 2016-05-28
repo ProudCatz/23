@@ -52,6 +52,22 @@
             });
         });
 
+        $(function () {
+            $("#mmm").click(function () {
+
+                $.ajax({
+                    type: "post",
+                    url: "WebForm1.aspx/mmmmm",
+                    data: "{'ss':'xxxx' }",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+                        alert(1);
+                    }
+                });
+            });
+        });
+
 
 
     </script>
@@ -63,6 +79,7 @@
             <input type="text" id="txt" />
 
             <input type="button" id="btnOK" value="btnOK" />
+            <input type="button" id="mmm" value="mmmmmm" />
             <ul id="list"></ul>
         </div>
     </form>
