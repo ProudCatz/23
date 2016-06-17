@@ -17,33 +17,30 @@
 </head>
 <body>
     <div class="container">
-        <form>
-            <table class="table table-hover">
-                <tr>
-                    <th>ID</th>
-                    <th>物品编号</th>
-                    <th>物品名称</th>
-                    <th>价格</th>
-                    <th>数量</th>
-                    <th>总价</th>
-                    <th></th>
-                </tr>
-                @foreach (var item in Model)
-            {
-                    <tr id="@item.Id">
-                        <td nn="nn">@item.Id</td>
-                        <td>@item.ProductId</td>
-                        <td>@item.ProductName</td>
-                        <td>@item.Price</td>
-                        <td>@item.count</td>
-                        <td>@item.Pricess</td>
-                        <td><a class="btn btn-link" tt="btn">删除</a></td>
-                    </tr>
-                }
+        <table id="table" class="table table-hover">
+            <tr>
+                <th>物品编号</th>
+                <th>物品名称</th>
+                <th>价格</th>
+                <th>数量</th>
+                <th>总价</th>
+                <th></th>
+            </tr>
+            @*@foreach (var item in Model)
+                {
+                        <tr id="@item.Id">
+                            <td tt="zzz">@item.ProductId</td>
+                            <td tt="xxx">@item.ProductName</td>
+                            <td>@item.Price</td>
+                            <td>@item.count</td>
+                            <td>@item.Pricess</td>
+                            <td><a class="btn btn-link" tt="btn">删除</a></td>
+                        </tr>
+                    }*@
 
-            </table>
-            <input type="submit" id="btnAdd" value="添加一行" />
-        </form>
+        </table>
+        <input type="submit" id="btnAdd" value="添加一行" />
     </div>
+    <script type="text/javascript"></script>
 </body>
 </html>

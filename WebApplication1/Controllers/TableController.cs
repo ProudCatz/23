@@ -17,6 +17,33 @@ namespace WebApplication1.Controllers
         // GET: Table
         public ActionResult Index()
         {
+            //if (Session["list"] != null)
+            //{
+            //    list = (List<Products>)Session["list"];
+            //    if (list.Count > 0)
+            //    {
+            //        product.Id = list.Last().Id;
+            //    }
+            //}
+            //if (bo)
+            //{
+            //    product.Id++;
+            //    product.ProductId = Guid.NewGuid().ToString();
+            //    product.ProductName = "测试";
+            //    product.Price = 10;
+            //    product.count = 1;
+            //    product.Pricess = product.Price * product.count;
+            //    list.Add(product);
+            //}
+            //Session["list"] = list;
+            //bo = true;
+            //return View(list);
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddNewRow(string id)
+        {
             if (Session["list"] != null)
             {
                 list = (List<Products>)Session["list"];
@@ -37,14 +64,7 @@ namespace WebApplication1.Controllers
             }
             Session["list"] = list;
             bo = true;
-            return View(list);
-        }
-
-        [HttpPost]
-        public ActionResult Index(Products product)
-        {
-
-            return Json("");
+            return Json(list);
         }
 
         [HttpPost]
@@ -56,7 +76,7 @@ namespace WebApplication1.Controllers
             list.Remove(pro);
             bo = false;
             Session["list"] = list;
-            Index();
+            //Index();
             return Json(id);
         }
     }

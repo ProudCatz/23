@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        .qqqq {
+            height: 200px;
+            width: 200px;
+            border: solid 1px #66ccff;
+        }
+    </style>
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.2.3.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/jq/MyjQuery.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    @*<script type="text/javascript">
+            $(function () {
+                $("#btn").bind("myClick", function () {
+                    $("#test").append("自定义事件").append($("<br>"));
+                });
+                $("#btn").click(function () {
+                    $(this).trigger("myClick");
+                });
+            });
+        </script>*@
+
+
+</head>
+<body>
+    <div class="container">
+        <input id="btn" type="button" value="点我">
+        <div id="test" style="width:100px;height:100px; border:1px solid #66ccff" class="success"></div>
+    </div>
+</body>
+</html>
