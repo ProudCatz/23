@@ -8,9 +8,7 @@ $.fn.myadd = function (a, b) {
 
 
 $(document).ready(function () {
-    $("#test").myadd("btn btn-success", $("#btn"))
-    //$("#test").css({ "background": "blue" })
-    //$("#btn").addClass("btn btn-success");
+    // $("#test").myadd("btn btn-success", $("#btn"))
 });
 //
 
@@ -22,19 +20,23 @@ $(document).ready(function () {
 //自定义事件
 $(function () {
     $("#btn").bind("myClick0", function () {
-        $("#test").append("自定义事件0").append($("<br>"));
+        $("#test").append("自定义事件0绿色").append($("<br>"));
+        $("#btn").myadd("btn btn-success", $("#btn"))
     });
     $("#btn").bind("myClick1", function () {
-        $("#test").append("自定义事件1").append($("<br>"));
+        $("#test").append("自定义事件1红色").append($("<br>"));
+        $("#btn").myadd("btn btn-danger", $("#btn"))
     });
     $("#btn").bind("myClick2", function () {
-        $("#test").append("自定义事件2").append($("<br>"));
+        $("#test").append("自定义事件2蓝色").append($("<br>"));
+        $("#btn").myadd("btn btn-info", $("#btn"))
     });
 });
 
 $(function () {
     var i = 0;
     $("#btn").click(function () {
+        $("#btn").removeClass();
         $(this).trigger("myClick" + i);
         i = i + 1;
         if (i > 2) {
