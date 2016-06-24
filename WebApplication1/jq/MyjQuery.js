@@ -1,5 +1,6 @@
 ﻿/// <reference path="C:\Users\z\Documents\Visual Studio 2015\Projects\WebApplication2\WebApplication1\Scripts/jquery-2.2.3.js" />
 
+//自定义事件和自定义函数联动
 
 //自定义函数
 $.fn.myadd = function (a, b) {
@@ -11,7 +12,6 @@ $(document).ready(function () {
     // $("#test").myadd("btn btn-success", $("#btn"))
 });
 //
-
 
 
 
