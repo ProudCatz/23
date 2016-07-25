@@ -1,8 +1,23 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
+@model WebCore.Model.My
 @{
+    <div class="form-horizontal">
+        <div class="form-group">
+            <form method="post" asp-controller="My" asp-action="Index">
+                @*ID<input type="text" class="form-control" id="id" name="id" />
+                    NAME<input type="text" class="form-control" id="name" name="name" />*@
+                @Html.TextBoxFor(model => model.id, new { @class = "form-control" })
+                @Html.TextBoxFor(model => model.name, new { @class = "form-control" })
+                <input type="submit" class="btn btn-info" value="提交" />
+                <br />
+                @ViewBag.id
+                <br />
+                @ViewBag.name
+            </form>
+            <a asp-are="" asp-controller="My" asp-action="Test" class="btn btn-default">Test</a>
+        </div>
+    </div>
 }
-@Html.TextArea("asd");
-<input type="text" value="" id="aa" name="aa" class="btn btn-info" />
-<label class="label label-default">qweqweqweqweqwe</label>
+

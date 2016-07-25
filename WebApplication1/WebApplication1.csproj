@@ -455,6 +455,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Classes\Constructor.cs" />
     <Compile Include="Controllers\ajaxController.cs" />
     <Compile Include="Controllers\MyjQueryController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
@@ -478,6 +479,7 @@
     <Content Include="Views\ajax\postindex.cshtml" />
     <Content Include="Views\Table\Index.cshtml" />
     <Content Include="Views\MyjQuery\Index.cshtml" />
+    <Content Include="Views\Student\Getstr.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

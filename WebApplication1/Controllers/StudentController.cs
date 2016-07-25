@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Models;
+using WebApplication1.Classes;
 
 namespace WebApplication1.Controllers
 {
@@ -34,6 +35,17 @@ namespace WebApplication1.Controllers
                 return Json(stu);
             }
             return Json("false");
+        }
+
+
+
+        public string Getstr()
+        {
+            Constructor con = new Constructor("999");
+            string ss = con.Get();
+            Constructor co = new Constructor();
+            ss += co.Get();
+            return ss;
         }
     }
 }

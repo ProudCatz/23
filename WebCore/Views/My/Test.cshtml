@@ -1,0 +1,8 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model WebCore.Model.My
+@{
+    @Html.TextBoxFor(model => model.id, new { @class = "form-control" })
+    @Html.TextBoxFor(model => model.name, new { @class = "form-control" })
+}
